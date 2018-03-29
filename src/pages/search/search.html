@@ -14,5 +14,28 @@
 
 
 <ion-content padding>
+  <ion-slides>
+
+    <ion-slide style="background-color: rgba(184, 174, 174, 0.21)">
+      How much cash on you?
+      <ion-item>
+        <ion-badge item-end>{{money}}</ion-badge>
+        <ion-range [(ngModel)]="money" min="100" max="100000" step="10" snaps="false" dualKnobs="false" pin="true">
+          <ion-icon range-left small name="logo-usd"></ion-icon>
+          <ion-icon range-right name="logo-usd"></ion-icon>
+        </ion-range>
+      </ion-item>
+    </ion-slide>
+
+    <ion-slide style="background-color: rgba(184, 174, 174, 0.21)">
+      <ion-label>Date</ion-label>
+      <ion-datetime displayFormat="DD/MM/YYYY" [(ngModel)]="date" (ionCancel)="test()"></ion-datetime>
+    </ion-slide>
+
+    <ion-slide style="background-color: red">
+      <h2>Slide 3</h2>
+    </ion-slide>
+
+  </ion-slides>
 
 </ion-content>
